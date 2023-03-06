@@ -1,0 +1,36 @@
+<html>
+
+<body>
+
+    <br><br><br>
+    <h1>Todo list</h1><br>
+    <h2>Overdue</h2>
+
+    <% for(let i=0;i<overDue.length; i++){ %>
+        Task<%=i+1 %><br>
+            <%= overDue[i].title %>
+                <%= overDue[i].duedate %>
+                    <%= (overDue[i].completed==true)?"Done " :" Not done " %>
+    <% } %>
+
+    <h2>Duetoday</h2>
+
+    <% for(let i=0;i<dueToday.length; i++){ %>
+        Task<%=i+1 %><br>
+        <%= dueToday[i].title %>
+        <%= dueToday[i].duedate %>
+        <%= (dueToday[i].completed==true)?" Done " :" Not done " %>
+    <% } %>
+
+    <h2>DueLater</h2>
+
+    <% for(let i=0;i<dueLater.length; i++){ %>
+        Task<%=i+1 %><br>
+        <%= dueLater[i].title %>
+        <%= dueLater[i].duedate %>
+        <%= (dueLater[i].completed==true)?" Done " :" Not done " %>
+    <% } %>
+
+</body>
+
+</html>
